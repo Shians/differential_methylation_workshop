@@ -24,6 +24,8 @@ Depends:
     tidyverse,
     plyranges,
     NanoMethViz
+Imports:
+    dplyr
 Suggests: 
     knitr,
     rmarkdown,
