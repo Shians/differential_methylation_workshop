@@ -25,7 +25,8 @@ Depends:
     plyranges,
     NanoMethViz
 Imports:
-    dplyr
+    dplyr,
+    TxDb.Mmusculus.UCSC.mm10.knownGene
 Suggests: 
     knitr,
     rmarkdown,
