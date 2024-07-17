@@ -1,4 +1,4 @@
-Package: differential_methylation_workshop
+Package: NanoMethVizWorkshop
 Title: Long-read methylation data analysis with NanoMethViz and Bioconductor
 Version: 1.0.0
 Authors@R: 
