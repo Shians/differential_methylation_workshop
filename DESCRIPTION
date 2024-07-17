@@ -26,7 +26,8 @@ Depends:
     NanoMethViz
 Imports:
     dplyr,
-    TxDb.Mmusculus.UCSC.mm10.knownGene
+    TxDb.Mmusculus.UCSC.mm10.knownGene,
+    org.Mm.eg.db
 Suggests: 
     knitr,
     rmarkdown,
