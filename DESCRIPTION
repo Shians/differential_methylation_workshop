@@ -24,7 +24,6 @@ Depends:
     tidyverse,
     plyranges,
     NanoMethViz
-
 Suggests: 
     knitr,
     rmarkdown,
