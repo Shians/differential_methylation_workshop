@@ -10,6 +10,8 @@ vignette: >
 
 ```{r, cache = FALSE, include = FALSE}
 knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(out.width = 600)
+knitr::opts_chunk$set(fig.width = 8)
 set.seed(1234)
 ```
 
@@ -43,16 +45,16 @@ if (!dir.exists("input")) {
 
 The data we will be working with comes from the neural stem cells of triplicate female mice. The mice were F1 crosses between an Xist KO 129S1 female and CAST male, the resulting offspring have sufficiently different parental chromosomes to allow effective genome-wide haplotyping to distinguish the parent-of-origin for long-reads, allowing for the identification of genes that are imprinted or strain-specific. The Xist KO of the maternal genome also guarantees that X-inactivation takes place on the paternal X chromosome, allowing for the study of X-inactivation. Using Oxford Nanopore Technology's long-read direct DNA sequencing platform allows for DNA modification information to be captured and here we use it to study 5mC methylation in the mouse genome. For this workshop we will only use a subset of the data focusing on chromosome 7.
 
-```{r}
-knitr::include_graphics(system.file("images/MouseDesign.png", package = "NanoMethVizWorkshop"))
+```{r, echo=FALSE}
+knitr::include_graphics("MouseDesign.png")
 ```
 
 # Loading in data
 
 modBAM files are BAM files containing reads with additional tags on each read storing information about methylation probabilities at sites of interest, this is the currently preferred output of Dorado, the primary methylation caller offered by ONT. To use this data in `NanoMethViz` we must construct an object of the `ModBamResults` class. The `ModBamResults` class is a container for storing methylation data from multiple samples, along with sample annotation and exon annotation. To create this object we need to provide paths to the modBAM files, a sample table, and optionally exon annotation.
 
-```{r}
-knitr::include_graphics(system.file("images/ModBamResult.png", package = "NanoMethVizWorkshop"))
+```{r, echo=FALSE}
+knitr::include_graphics("ModBamResult.png")
 ```
 
 ```{r}
