@@ -200,7 +200,7 @@ There are alternatives to `dmrseq` for identifying DMRs, such as `bsseq`, `DSS` 
 ```{r}
 pData(bss)$condition <- NanoMethViz::samples(nmr)$group
 
-if (!file.exists("data/regions")) {
+if (!file.exists("data/regions.rds")) {
     regions <- dmrseq(bss, testCovariate = "condition", minNumRegion = 20)
     saveRDS(regions, "data/regions.rds")
 } else {
